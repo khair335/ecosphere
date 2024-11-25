@@ -1,0 +1,121 @@
+/* tablet responsive */
+@media (max-width: 1024px) {
+  header .nav-link {
+    padding: 0px 10px;
+  }
+}
+
+/* mobile responsive */
+@media (max-width: 768px) {
+
+  /* header section */
+  .nav {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 110px;
+    /* Adjust based on your header height */
+    right: 0;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  header .nav-link {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    color: #212529;
+    width: 100%;
+    display: block;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav.active+.menu-toggle .open-icon {
+    display: none;
+  }
+
+  .nav.active+.menu-toggle .close-icon {
+    display: inline;
+  }
+
+  /* header section */
+
+  /* service-container */
+  .service-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .service-item {
+    min-height: 300px;
+  }
+
+  /* service-container */
+
+
+  /* footer section */
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .footer-bottom-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-bottom-links {
+    margin-top: 10px;
+  }
+
+  .newsletter-container-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-email-input {
+    max-width: 95%;
+  }
+
+  .footer-bottom {
+    display: none;
+  }
+
+  /* footer section */
+}
