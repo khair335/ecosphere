@@ -443,7 +443,7 @@
           <li><a href="#">Suomi</a></li>
           <li><a href="#">Nederlands</a></li>
           <li><a href="#">Čeština</a></li>
-          <li><a href="#">Укранс��ка</a></li>
+          <li><a href="#">Укранска</a></li>
         </ul>
       </div> -->
       <div class="footer-column">
@@ -503,6 +503,7 @@
           const contactForm = document.querySelector('.contact-form');
           const modelOptions = document.querySelectorAll('.model-options');
           const enquiryTitle = document.getElementById('select-modal-name');
+          const selectModalText = document.getElementById('select-modal-text');
 
           // Uncheck all other checkboxes
           document.querySelectorAll('.product-checkbox').forEach(otherCheckbox => {
@@ -539,6 +540,11 @@
             } else {
               flowdryaEnquiry.style.display = 'none';
             }
+
+            // Check if any model options are visible
+            const anyModelVisible = Array.from(modelOptions).some(option => option.style.display === 'flex');
+            selectModalText.style.display = anyModelVisible ? 'block' : 'none';
+
           } else {
             dumploadaEnquiry.style.display = 'none';
             contactForm.style.display = 'none';
@@ -546,6 +552,7 @@
             modelOptions.forEach(option => {
               option.style.display = 'none';
             });
+            selectModalText.style.display = 'none';
           }
         });
       });
