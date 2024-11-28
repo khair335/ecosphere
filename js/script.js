@@ -81,3 +81,46 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+// document.addEventListener('DOMContentLoaded', function() {
+//   // Find all links containing Magic 360 trial text within zoom-fig section
+//   const zoomFigSection = document.getElementById('zoom-fig');
+//   if (zoomFigSection) {
+//     const magicToolboxLinks = zoomFigSection.querySelectorAll('a');
+
+//     magicToolboxLinks.forEach(link => {
+//       if (link.textContent.includes('Magic 360™ trial version') ||
+//           link.href.includes('magictoolbox.com/magic360')) {
+//         // Hide element completely
+//         link.style.display = 'none';
+//         link.style.visibility = 'hidden';
+//         link.style.opacity = '0';
+//         link.style.position = 'absolute';
+//         link.style.pointerEvents = 'none';
+//         // Remove from document flow
+//         link.remove();
+//       }
+//     });
+//   }
+
+//   // Also check for any dynamically added elements
+//   const observer = new MutationObserver(function(mutations) {
+//     mutations.forEach(function(mutation) {
+//       mutation.addedNodes.forEach(function(node) {
+//         if (node.nodeType === 1) { // Element node
+//           const links = node.querySelectorAll('a');
+//           links.forEach(link => {
+//             if (link.textContent.includes('Magic 360™ trial version') ||
+//                 link.href.includes('magictoolbox.com/magic360')) {
+//               link.remove();
+//             }
+//           });
+//         }
+//       });
+//     });
+//   });
+
+//   observer.observe(document.body, {
+//     childList: true,
+//     subtree: true
+//   });
+// });

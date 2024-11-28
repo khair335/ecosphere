@@ -172,7 +172,9 @@ header .nav-link {
 .header.scrolled .menu-toggle i{
   color: #fff;
 }
-
+.Magic360 span>a{
+  display: none !important;
+}
 
 /* Header */
 
@@ -927,6 +929,7 @@ footer {
   width: 100%;
   padding-top: 100px;
 
+
 }
 
 .table-header {
@@ -955,7 +958,7 @@ footer {
 }
 
 .table-section th {
-  background-color: #4CAF50;
+  background-color: #005801;
   color: white;
 }
 
@@ -1480,6 +1483,7 @@ footer {
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form input[type="tel"],
+.contact-form input[type="file"],
 .contact-form textarea {
   height: 40px;
   padding: 8px 12px;
@@ -1647,7 +1651,9 @@ footer {
 
 /* contact */
 
-
+.preview{
+  background-color: #f1f1f1;
+}
 
 
 

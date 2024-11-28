@@ -1,3 +1,11 @@
+@media (max-width: 1200px) {
+  .table-section {
+     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 10px;
+  }
+}
+
 /* tablet responsive */
 @media (max-width: 1024px) {
   header .nav-link {

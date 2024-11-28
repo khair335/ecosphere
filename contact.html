@@ -269,8 +269,6 @@
         <p class="error-message" id="model-error" style="color: red; display: none;">Please select a model.</p>
       </div>
 
-
-
       <!-- Contact Form -->
       <div class="contact-form" style="display: none;">
         <form id="contact-form">
@@ -297,49 +295,44 @@
             <textarea name="enquiry" placeholder="Please enter the details of your enquiry"></textarea>
           </div>
 
-          <!-- FlowDrya Enquiry Form -->
-          <div class="flowdrya-enquiry" style="display: none;">
-            <div class="contact-section-header">
-              <h3 class="contact-section-header-title" id="flowdrya-modal-name">FLOWDRYA ENQUIRY FORM</h3>
-              <br>
-              <p class="contact-section-header-text">Please provide additional details for FlowDrya products.</p>
-            </div>
-            <div class="form-row">
-              <textarea name="material-description"
-                placeholder="Description and specification of the material to be dried."></textarea>
-            </div>
-            <div class="form-row">
-              <input type="text" name="bulk-density"
-                placeholder="Wet basis bulk density of the material to be dried (e.g., Kg/m³)">
-            </div>
-            <div class="form-row">
-              <input type="text" name="moisture-content" placeholder="Wet basis moisture % of the material to be dried">
-            </div>
-            <div class="form-row">
-              <input type="text" name="target-moisture" placeholder="Target dry % moisture of the output material">
-            </div>
-            <div class="form-row">
-              <input type="file" name="material-photo" accept=".jpg, .png">
-            </div>
-            <div class="form-row">
-              <input type="text" name="annual-volume"
-                placeholder="The m³ of material you would like to process per annum">
-            </div>
-            <div class="form-row">
-              <input type="text" name="fuel-type" placeholder="Your preferred fuel type (if applicable)">
-            </div>
-            <div class="form-row">
-              <input type="text" name="energy-source" placeholder="Your preferred energy source (if applicable)">
-            </div>
-            <div class="form-row">
-              <input type="text" name="residual-heat"
-                placeholder="If your project includes residual heat, specify the amount and form">
-            </div>
-            <div class="form-row">
-              <input type="text" name="location" placeholder="The location of the dryer">
-            </div>
-          </div>
-
+           <!-- FlowDrya Enquiry Form -->
+      <div class="flowdrya-enquiry" style="display: none;">
+        <div class="contact-section-header">
+          <h3 class="contact-section-header-title" id="flowdrya-modal-name">FLOWDRYA ENQUIRY FORM</h3>
+          <br>
+          <p class="contact-section-header-text">Please provide additional details for FlowDrya products.</p>
+        </div>
+        <div class="form-row">
+          <textarea name="material-description" placeholder="Description and specification of the material to be dried."></textarea>
+        </div>
+        <div class="form-row">
+          <input type="text" name="bulk-density" placeholder="Wet basis bulk density of the material to be dried (e.g., Kg/m³)">
+        </div>
+        <div class="form-row">
+          <input type="text" name="moisture-content" placeholder="Wet basis moisture % of the material to be dried">
+        </div>
+        <div class="form-row">
+          <input type="text" name="target-moisture" placeholder="Target dry % moisture of the output material">
+        </div>
+        <div class="form-row">
+          <input type="file" name="material-photo" accept=".jpg, .png">
+        </div>
+        <div class="form-row">
+          <input type="text" name="annual-volume" placeholder="The m³ of material you would like to process per annum">
+        </div>
+        <div class="form-row">
+          <input type="text" name="fuel-type" placeholder="Your preferred fuel type (if applicable)">
+        </div>
+        <div class="form-row">
+          <input type="text" name="energy-source" placeholder="Your preferred energy source (if applicable)">
+        </div>
+        <div class="form-row">
+          <input type="text" name="residual-heat" placeholder="If your project includes residual heat, specify the amount and form">
+        </div>
+        <div class="form-row">
+          <input type="text" name="location" placeholder="The location of the dryer">
+        </div>
+      </div>
           <div class="agreement-container">
             <input type="checkbox" id="agreement" name="agreement">
             <label class="agreement-label" for="agreement">I agree that Stronga may use my details as described in the
@@ -349,8 +342,6 @@
           <button type="submit">Send Enquiry</button>
         </form>
       </div>
-
-
     </section>
 
     <!-- office location -->
@@ -452,7 +443,7 @@
           <li><a href="#">Suomi</a></li>
           <li><a href="#">Nederlands</a></li>
           <li><a href="#">Čeština</a></li>
-          <li><a href="#">Укранська</a></li>
+          <li><a href="#">Укранс��ка</a></li>
         </ul>
       </div> -->
       <div class="footer-column">
@@ -521,8 +512,7 @@
           });
 
           if (this.checked) {
-            dumploadaEnquiry.style.display = 'none';
-            flowdryaEnquiry.style.display = 'none';
+            dumploadaEnquiry.style.display = 'block';
             contactForm.style.display = 'block';
             enquiryTitle.textContent = `${this.value} ENQUIRY FORM`;
 
@@ -541,11 +531,18 @@
               document.getElementById('hooklift-solutions-models').style.display = 'flex';
             } else if (this.value === 'FlowSteama') {
               document.getElementById('flowsteama-models').style.display = 'flex';
-            } else if (this.value === 'FlowDrya Green' || this.value === 'FlowDrya International') {
+            }
+
+            // Show flowdrya-enquiry section for FlowDrya products
+            if (this.value === 'FlowDrya Green' || this.value === 'FlowDrya International') {
               flowdryaEnquiry.style.display = 'block';
+            } else {
+              flowdryaEnquiry.style.display = 'none';
             }
           } else {
+            dumploadaEnquiry.style.display = 'none';
             contactForm.style.display = 'none';
+            flowdryaEnquiry.style.display = 'none';
             modelOptions.forEach(option => {
               option.style.display = 'none';
             });
