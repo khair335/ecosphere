@@ -60,13 +60,19 @@
 .post-category {
   color: green;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 500;
+  margin-top: 5px;
   margin-bottom: 5px;
   font-size: 0.8em;
 }
 @media (max-width: 768px) {
   .tab-content {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .tabs{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0px 16px;
   }
 }
 

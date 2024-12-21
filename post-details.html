@@ -18,8 +18,8 @@
 </head>
 
 <body>
-        <div id="loader" class="loader"></div>
- <header class="header">
+  <div id="loader" class="loader"></div>
+  <header class="header">
     <div class="header-container">
       <a href="/" class="logo-link">
         <img src="/assets/icon/logoDark.svg" alt="logo" class="logo">
@@ -28,7 +28,7 @@
         <i class="fas fa-bars open-icon"></i>
         <i class="fas fa-times close-icon" style="display: none;"></i>
       </button>
-     <div class="nav">
+      <div class="nav">
         <div class="nav-item">
           <a href="#" class="nav-link">Transport Solutions</a>
           <div class="dropdown">
@@ -65,25 +65,37 @@
     </div>
     </div>
   </header>
-    <main class="post-details-container">
-        <div id="post-container"></div>
-        <div class="post-navigation">
-            <button class="prev-post-btn">Previous Post</button>
-            <button class="next-post-btn">Next Post</button>
-        </div>
-        <div class="related-posts">
-            <h2>Related posts</h2>
-            <div id="related-posts-container" class="related-posts-container"></div>
-        </div>
-        <div class="share-post">
-            <p>Share this post</p>
-            <div class="social-icons">
-                <a href="#" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-    </main>
+  <main class="post-details-container">
+    <div id="post-container"></div>
+    <div class="post-navigation">
+      <button class="prev-post-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z">
+          </path>
+        </svg>
+        Previous Post</button>
+      <button class="next-post-btn">Next Post <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          fill="currentColor">
+          <path
+            d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z">
+          </path>
+        </svg></button>
+    </div>
+    <div class="share-post">
+      <p>Share this post</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="related-posts">
+      <h2>Related posts</h2>
+      <div id="related-posts-container" class="related-posts-container"></div>
+    </div>
+
+  </main>
 
   <footer>
     <div class="footer-container">

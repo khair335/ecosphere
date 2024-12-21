@@ -74,9 +74,17 @@
     cursor: pointer;
     position: relative;
     transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    white-space: nowrap;
   }
-
-  .post-navigation button::before {
+.post-navigation button svg{
+  width: 20px;
+  height: 20px;
+}
+  /* .post-navigation button::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -84,15 +92,15 @@
     width: 0;
     height: 0;
     border-style: solid;
-  }
+  } */
 
-  .prev-post-btn::before {
+  /* .prev-post-btn::before {
     left: 10px;
     border-width: 6px 8px 6px 0;
     border-color: transparent white transparent transparent;
-  }
+  } */
 
-  .next-post-btn::before {
+  /* .next-post-btn::before {
     right: 10px;
     border-width: 6px 0 6px 8px;
     border-color: transparent transparent transparent white;
@@ -101,7 +109,7 @@
   .post-navigation button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
-  }
+  } */
 
   .share-post {
     display: flex;
@@ -130,9 +138,16 @@
   }
 
   .related-posts {
-    margin-top: 40px;
+    margin: 40px 0;
   }
-
+  .related-posts h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 10px ;
+    font-family: 'Roboto', sans-serif;
+  }
   .related-posts-container {
     display: flex;
     justify-content: space-between;
@@ -153,10 +168,28 @@
   .related-post h3 {
     font-size: 18px;
     margin: 10px 0;
+    text-align: left;
+
   }
 
   .related-post a {
     color: #007BFF;
     text-decoration: none;
     font-weight: bold;
+    text-align: left;
+    width: 100%;
+    display: block;
   }
+@media (max-width: 768px) {
+  .related-posts-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .related-post{
+    width: 100%;
+  }
+  .post-details-container{
+    padding: 0px 20px;
+  }
+
+}
