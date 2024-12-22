@@ -74,10 +74,10 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function () {
       if (window.scrollY > 50) { // Adjust the scroll threshold as needed
         header.classList.add('scrolled');
-        logo.src = '/assets/icon/logo.svg';
+        logo.src = '/assets/icon/logo.png';
       } else {
         header.classList.remove('scrolled');
-        logo.src = '/assets/icon/logoDark.svg';
+        logo.src = '/assets/icon/logo.png';
       }
     });
   });
