@@ -1553,10 +1553,10 @@ footer {
 
 
 .contact-hero {
-  background-image: url('/assets/contact/Contact-1.jpg');
+  /* background-image: url('/assets/contact/Contact-1.jpg'); */
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
