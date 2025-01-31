@@ -67,20 +67,20 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const header = document.querySelector('.header');
-    const logo = document.querySelector('.logo');
+  // document.addEventListener('DOMContentLoaded', function () {
+  //   const header = document.querySelector('.header');
+  //   const logo = document.querySelector('.logo');
 
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 50) { // Adjust the scroll threshold as needed
-        header.classList.add('scrolled');
-        logo.src = '/assets/icon/logo.png';
-      } else {
-        header.classList.remove('scrolled');
-        logo.src = '/assets/icon/logo.png';
-      }
-    });
-  });
+  //   window.addEventListener('scroll', function () {
+  //     if (window.scrollY > 50) { // Adjust the scroll threshold as needed
+  //       header.classList.add('scrolled');
+  //       logo.src = '/assets/icon/logo.png';
+  //     } else {
+  //       header.classList.remove('scrolled');
+  //       logo.src = '/assets/icon/logo.png';
+  //     }
+  //   });
+  // });
 // document.addEventListener('DOMContentLoaded', function() {
 //   // Find all links containing Magic 360 trial text within zoom-fig section
 //   const zoomFigSection = document.getElementById('zoom-fig');
@@ -124,3 +124,38 @@ document.addEventListener('DOMContentLoaded', function() {
 //     subtree: true
 //   });
 // });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Clone the navigation menu for mobile
+    const headerNav = document.querySelector('.header-nav-list');
+    const mobileMenu = document.createElement('div');
+    mobileMenu.className = 'mobile-menu';
+    mobileMenu.innerHTML = headerNav.outerHTML;
+    document.body.appendChild(mobileMenu);
+
+    // Toggle mobile menu
+    const menuButton = document.querySelector('.header-nav-button-mobile');
+    menuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        // Toggle icon between hamburger and close
+        const icon = this.querySelector('i');
+        if (icon.classList.contains('fa-bars')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-xmark');
+        } else {
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.mobile-menu') &&
+            !event.target.closest('.header-nav-button-mobile')) {
+            mobileMenu.classList.remove('active');
+            const icon = menuButton.querySelector('i');
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+        }
+    });
+});
