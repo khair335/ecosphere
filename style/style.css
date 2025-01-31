@@ -569,15 +569,15 @@ padding: 40px;
 
 }
 .industries-served-item:nth-child(1){
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-right: 1px solid #034E8F;
+  border-bottom: 1px solid #034E8F;
 
 }
 .industries-served-item:nth-child(2){
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #034E8F;
 }
 .industries-served-item:nth-child(3){
-  border-right: 1px solid #fff;
+  border-right: 1px solid #034E8F;
 }
 .industries-served-item:nth-child(4){
   /* border-left: 1px solid #fff; */
