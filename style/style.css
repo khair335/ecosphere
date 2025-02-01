@@ -210,7 +210,7 @@ header {
 }
 
 /* hero */
-.hero {
+.new-hero {
   background-image: url('../assets/hero-bg.png');
   background-size: cover;
   background-position: center;
@@ -219,20 +219,20 @@ header {
   margin-top: -90px;
 }
 
-.hero-container {
+.new-hero-container {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
 }
 
-.hero-content {
+.new-hero-content {
   max-width: 938px;
   width: 100%;
   padding-top: 146px;
   padding-left: 96px;
 }
 
-.hero-content h1 {
+.new-hero-content h1 {
 
   font-family: 'Poppins';
   font-style: normal;
@@ -247,7 +247,7 @@ header {
 
 }
 
-.hero-content p {
+.new-hero-content p {
 
   font-family: 'Poppins';
   font-style: normal;
@@ -262,7 +262,7 @@ header {
 
 }
 
-.hero-content button {
+.new-hero-content button {
   max-width: 262px;
   width: 100%;
   height: 74px;
@@ -289,7 +289,105 @@ header {
 }
 
 /* hero */
+/* hero-section */
+.hero-section {
+  background-image: url('../assets/productsImg/hero-1.jpg');
+  padding: 25px 0;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
 
+.hero-section.roadgrada {
+  background-image: url('../assets/productsImg/roadgrada/hero.jpg');
+
+}
+
+.hero-section.hooklift-solutions {
+  background-image: url('../assets/productsImg/hooklift-solutions/Hooklift-Solutions-10.jpg');
+
+}
+
+.hero-section.truckloada {
+  background-image: url('../assets/productsImg/truckloada/TruckLoada-2.jpg');
+
+}
+
+.hero-section.dumploada-hp {
+  background-image: url('../assets/productsImg/dumploada-hp/DumpLoada-HP-6.jpg');
+
+}
+
+.hero-section.dumploada {
+  background-image: url('../assets/productsImg/dumploada/DumpLoada-6.jpg');
+
+}
+
+.hero-section.wet-materials-by-products {
+  background-image: url('../assets/productsImg/wet-materials-by-products/Wet-Materials-By-Products-1-1.jpg');
+
+}
+
+.hero-section.flowdrya-green-series {
+  background-image: url('../assets/productsImg/flowdrya-green-series/FlowDrya-Green-Series-2-scaled.jpg');
+
+}
+
+.hero-section.flowdrya-international-series {
+  background-image: url('../assets/productsImg/flowdrya-international-series/FlowDrya-International-Series-14.jpg');
+
+}
+
+.hero-section.heatex {
+  background-image: url('../assets/productsImg/heatex/Heatex-2.jpg');
+
+}
+
+.hero-section.drying-stations {
+  background-image: url('../assets/productsImg/drying-stations/Drying-Stations-1.jpg');
+
+}
+
+.hero-section.flowfeeda {
+  background-image: url('../assets/productsImg/flowfeeda/FlowFeeda-5.jpg');
+
+}
+
+.hero-section.flowsteama {
+  background-image: url('../assets/productsImg/flowsteama/FlowSteama-1-1.jpg');
+
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px;
+}
+
+.hero-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.hero-description {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.hero-link {
+  font-size: 22px;
+  color: #005801;
+  font-weight: 400;
+}
+
+.hero-link:hover {
+  text-decoration: underline;
+}
+
+/* hero-section */
 
 /* introduction-content */
 .introduction-content {
