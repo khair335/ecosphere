@@ -354,7 +354,7 @@
     display: block;
     border: none;
     background: none;
-    color: white;
+    color: #003A6C;
     font-size: 24px;
   }
 
@@ -621,7 +621,7 @@
 }
 
 .mobile-menu li {
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 
 .mobile-menu a {
@@ -642,7 +642,7 @@
   display: none;
   border: none;
   background: none;
-  color: white;
+  color: #003A6C;
   font-size: 24px;
   cursor: pointer;
 }
@@ -654,5 +654,8 @@
 
   .header-nav-list {
     display: none;
+  }
+  .header-nav-sublist{
+    width: 345px;
   }
 }
